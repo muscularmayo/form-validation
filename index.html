@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Form-Validation Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script charset="utf-8" src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <form>
+    <div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+      <div>
+        <label for="country">Country</label>
+        <input id="country" name="country" type="text" required>
+      </div>
+      <div>
+        <label for="zipCode">Zip Code</label>
+        <input id="zipCode" name="zipCode" type="text" maxlength="6" minglength="5" required>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+      </div>
+      <div>
+        <label for="passwordConfirmation">Password Confirmation</label>
+        <input id="passwordConfirmation" name="passwordConfirmation" type="password" required>
+      </div>
+      <input type="submit" value="Submit">
+    </div>
+    <div id="message">
+      <h3>Password must contain the following:</h3>
+      <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+      <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+      <p id="number" class="invalid">A <b>number</b></p>
+      <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    </div>
+
+    <div id="pswrdConfirm">
+      <p id="Confirmation" class="invalid">Passwords must match</p>
+    </div>
+
+
+
+
+
+
+
+  </form>
+
+
+</body>
+</html>
