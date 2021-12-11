@@ -6,6 +6,8 @@ const capital = document.getElementById("capital");
 const number = document.getElementById("number");
 const length = document.getElementById("length");
 const confirmation = document.getElementById("confirmation")
+const email = document.getElementById("email")
+
 
 passwordInput.onfocus = function() {
   document.getElementById("message").style.display = "block";

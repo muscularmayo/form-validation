@@ -38,7 +38,7 @@ input:valid {
   margin-top: 10px;
 }
 
-#pswrdConfirm {
+#pswrdConfirm #emailMessage{
   display:none;
   background: #f1f1f1;
   color: #000;
