@@ -5,7 +5,7 @@ const passwordConfirmationInput = document.getElementById("passwordConfirmation"
 const capital = document.getElementById("capital");
 const number = document.getElementById("number");
 const length = document.getElementById("length");
-
+const confirmation = document.getElementById("confirmation")
 
 passwordInput.onfocus = function() {
   document.getElementById("message").style.display = "block";
@@ -60,6 +60,16 @@ passwordInput.onkeyup = function() {
     } else {
       length.classList.remove("valid");
       length.classList.add("invalid");
+    }
+  }
+
+  passwordConfirmationInput.onkeyup = function () {
+    if (passwordConfirmationInput.value === passwordInput.value) {
+      confirmation.classList.remove("invalid")
+      confirmation.classList.add("valid")
+    } else {
+      confirmation.classList.remove("valid")
+      confirmation.classList.add("invalid")
     }
   }
 
